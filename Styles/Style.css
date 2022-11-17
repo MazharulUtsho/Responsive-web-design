@@ -1,0 +1,116 @@
+:root {
+    --white: #fff;
+    --black: black;
+    --blue: #011f4b;
+    --light-blue: #005b96;
+    --sky-blue: #6497b1;
+    --dark-lime: darkslategrey;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: var(--blue);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 75%;
+    height: 60vh;
+    background-color: var(--light-blue);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.card-text {
+    width: 50%;
+    height: 100%;
+    background-color: lightsalmon;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.card-image {
+    width: 50%;
+    height: 100%;
+    background-color: lightskyblue;
+}
+
+.new-style {
+    display: flex;
+    gap: 25px;
+}
+
+.text-style>h1 {
+    margin-bottom: 20px;
+}
+
+.text-style>h1>span {
+    color: var(--dark-lime);
+}
+
+.card-image>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+@media only screen and (max-width:1100px) {
+    .card-text {
+        width: 70%;
+    }
+
+    .card-image {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+
+    .card-image {
+        width: 100%;
+
+    }
+
+    .card-text {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card-text {
+        height: 90%;
+        padding: 15px;
+    }
+
+    .text-style>h1 {
+        font-size: 2rem;
+    }
+
+    .new-style {
+        font-size: 1rem;
+    }
+}
